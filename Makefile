@@ -11,3 +11,6 @@ srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp
 
 srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
 	g++ -std=c++17 -c srcMLXPathCountTest.cpp
+
+srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o
+	g++ -std=c++17 srcMLXPathCountTest.o srcMLXPathCount.o -lxml2 -o srcMLXPathCountTest
