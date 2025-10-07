@@ -17,3 +17,7 @@ srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
 
 srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o
 	g++ -std=c++17 srcMLXPathCountTest.o srcMLXPathCount.o -lxml2 -o srcMLXPathCountTest
+
+.PHONY:clean
+clean :
+	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o
