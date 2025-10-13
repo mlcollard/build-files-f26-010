@@ -33,6 +33,11 @@ manpage : srccomplexity.1
 srccomplexity.1 : srccomplexity.1.md
 	lowdown -s -Tman -o srccomplexity.1 srccomplexity.1.md
 
+# View the man page
+.PHONY:man
+man : manpage
+	man ./srccomplexity.1
+
 .PHONY:clean
 clean :
 	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o srccomplexity.1
