@@ -19,6 +19,7 @@ srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o
 srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
 	g++ -std=c++17 -c $<
 
+# run srccomplexity on the demo file
 .PHONY:run
 run : srccomplexity
 	./srccomplexity srcMLXPathCount.cpp.xml
