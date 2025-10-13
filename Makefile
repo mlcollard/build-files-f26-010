@@ -26,6 +26,13 @@ run : srccomplexity
 test : srcMLXPathCountTest
 	./srcMLXPathCountTest
 
+# Generate manpage
+.PHONY:manpage
+manpage : srccomplexity.1
+
+srccomplexity.1 : srccomplexity.1.md
+	lowdown -s -Tman -o srccomplexity.1 srccomplexity.1.md
+
 .PHONY:clean
 clean :
-	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o
+	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o srccomplexity.1
