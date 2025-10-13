@@ -24,6 +24,7 @@ srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
 run : srccomplexity
 	./srccomplexity srcMLXPathCount.cpp.xml
 
+# execute tests
 .PHONY:test
 test : srcMLXPathCountTest
 	./srcMLXPathCountTest
