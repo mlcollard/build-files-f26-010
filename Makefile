@@ -42,6 +42,7 @@ srccomplexity.1 : srccomplexity.1.md
 man : manpage
 	man ./srccomplexity.1
 
+# delete generated files
 .PHONY:clean
 clean :
 	rm -f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o srccomplexity.1
