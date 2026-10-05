@@ -8,7 +8,7 @@
  viewBox="0.00 0.00 1084.00 334.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 330.4)">
 <polygon fill="white" stroke="none" points="-4,4 -4,-330.4 1079.66,-330.4 1079.66,4 -4,4"/>
-<g id="a_graph0_0"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile" xlink:title="View this version of the Makefile">
+<g id="a_graph0_0"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile" xlink:title="View this version of the Makefile">
 <text xml:space="preserve" text-anchor="start" x="440.06" y="-298.4" font-family="Times,serif" font-size="20.00">Build for srcComplexity</text>
 </a>
 </g>
@@ -20,7 +20,7 @@
 </g>
 <!-- all -->
 <g id="node2" class="node">
-<g id="a_node2"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L3-L4" xlink:title="3 &#160;.PHONY:all&#10;4 &#160;all : srccomplexity srcMLXPathCountTest">
+<g id="a_node2"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L3-L4" xlink:title="3 &#160;.PHONY:all&#10;4 &#160;all : srccomplexity srcMLXPathCountTest">
 <ellipse fill="none" stroke="black" cx="380.26" cy="-251.2" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="380.26" y="-247" font-family="Times,serif" font-size="14.00" fill="green">all</text>
 </a>
@@ -28,7 +28,7 @@
 </g>
 <!-- srccomplexity -->
 <g id="node3" class="node">
-<g id="a_node3"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L6-L7" xlink:title="6 &#160;srccomplexity : srcComplexity.o srcMLXPathCount.o&#10;7 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 $^ &#45;lxml2 &#45;o $@">
+<g id="a_node3"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L6-L8" xlink:title="6 &#160;# srccomplexity&#10;7 &#160;srccomplexity : srcComplexity.o srcMLXPathCount.o&#10;8 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 $^ &#45;lxml2 &#45;o $@">
 <ellipse fill="none" stroke="black" cx="287.26" cy="-162" rx="65.74" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="287.26" y="-157.8" font-family="Times,serif" font-size="14.00" fill="red">srccomplexity</text>
 </a>
@@ -41,7 +41,7 @@
 </g>
 <!-- srcMLXPathCountTest -->
 <g id="node4" class="node">
-<g id="a_node4"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L15-L17" xlink:title="15 &#160;# srcMLXPathCountTest&#10;16 &#160;srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o&#10;17 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 $^ &#45;lxml2 &#45;o $@">
+<g id="a_node4"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L16-L18" xlink:title="16 &#160;# srcMLXPathCountTest&#10;17 &#160;srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o&#10;18 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 $^ &#45;lxml2 &#45;o $@">
 <ellipse fill="none" stroke="black" cx="472.26" cy="-162" rx="101.16" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="472.26" y="-157.8" font-family="Times,serif" font-size="14.00" fill="red">srcMLXPathCountTest</text>
 </a>
@@ -54,7 +54,7 @@
 </g>
 <!-- srcComplexity.o -->
 <g id="node5" class="node">
-<g id="a_node5"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L9-L10" xlink:title=" 9 &#160;srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp&#10;10 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;c $&lt;">
+<g id="a_node5"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L10-L11" xlink:title="10 &#160;srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp&#10;11 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;c $&lt;">
 <ellipse fill="none" stroke="black" cx="195.26" cy="-90" rx="75.14" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="195.26" y="-85.8" font-family="Times,serif" font-size="14.00" fill="red">srcComplexity.o</text>
 </a>
@@ -67,7 +67,7 @@
 </g>
 <!-- srcMLXPathCount.o -->
 <g id="node6" class="node">
-<g id="a_node6"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L12-L13" xlink:title="12 &#160;srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp&#10;13 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;I/usr/include/libxml2 &#45;c $&lt;">
+<g id="a_node6"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L13-L14" xlink:title="13 &#160;srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp&#10;14 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;I/usr/include/libxml2 &#45;c $&lt;">
 <ellipse fill="none" stroke="black" cx="380.26" cy="-90" rx="91.78" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="380.26" y="-85.8" font-family="Times,serif" font-size="14.00" fill="red">srcMLXPathCount.o</text>
 </a>
@@ -85,7 +85,7 @@
 </g>
 <!-- srcMLXPathCountTest.o -->
 <g id="node10" class="node">
-<g id="a_node10"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L19-L20" xlink:title="19 &#160;srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp&#10;20 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;c $&lt;">
+<g id="a_node10"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L20-L21" xlink:title="20 &#160;srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp&#10;21 &#160;&#160;&#160;&#160;&#160;g++ &#45;std=c++17 &#45;c $&lt;">
 <ellipse fill="none" stroke="black" cx="598.26" cy="-90" rx="108.4" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="598.26" y="-85.8" font-family="Times,serif" font-size="14.00" fill="red">srcMLXPathCountTest.o</text>
 </a>
@@ -148,7 +148,7 @@
 </g>
 <!-- run -->
 <g id="node12" class="node">
-<g id="a_node12"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L22-L25" xlink:title="22 &#160;# run srccomplexity on the demo file&#10;23 &#160;.PHONY:run&#10;24 &#160;run : srccomplexity&#10;25 &#160;&#160;&#160;&#160;&#160;./srccomplexity srcMLXPathCount.cpp.xml">
+<g id="a_node12"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L23-L26" xlink:title="23 &#160;# run srccomplexity on the demo file&#10;24 &#160;.PHONY:run&#10;25 &#160;run : srccomplexity&#10;26 &#160;&#160;&#160;&#160;&#160;./srccomplexity srcMLXPathCount.cpp.xml">
 <ellipse fill="none" stroke="black" cx="287.26" cy="-251.2" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="287.26" y="-247" font-family="Times,serif" font-size="14.00" fill="green">run</text>
 </a>
@@ -161,7 +161,7 @@
 </g>
 <!-- test -->
 <g id="node13" class="node">
-<g id="a_node13"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L27-L30" xlink:title="27 &#160;# execute tests&#10;28 &#160;.PHONY:test&#10;29 &#160;test : srcMLXPathCountTest&#10;30 &#160;&#160;&#160;&#160;&#160;./srcMLXPathCountTest">
+<g id="a_node13"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L28-L31" xlink:title="28 &#160;# execute tests&#10;29 &#160;.PHONY:test&#10;30 &#160;test : srcMLXPathCountTest&#10;31 &#160;&#160;&#160;&#160;&#160;./srcMLXPathCountTest">
 <ellipse fill="none" stroke="black" cx="472.26" cy="-251.2" rx="27" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="472.26" y="-247" font-family="Times,serif" font-size="14.00" fill="green">test</text>
 </a>
@@ -174,7 +174,7 @@
 </g>
 <!-- manpage -->
 <g id="node14" class="node">
-<g id="a_node14"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L32-L34" xlink:title="32 &#160;# Generate manpage&#10;33 &#160;.PHONY:manpage&#10;34 &#160;manpage : srccomplexity.1">
+<g id="a_node14"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L33-L35" xlink:title="33 &#160;# Generate manpage&#10;34 &#160;.PHONY:manpage&#10;35 &#160;manpage : srccomplexity.1">
 <ellipse fill="none" stroke="black" cx="967.26" cy="-162" rx="45.89" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="967.26" y="-157.8" font-family="Times,serif" font-size="14.00" fill="green">manpage</text>
 </a>
@@ -182,7 +182,7 @@
 </g>
 <!-- srccomplexity.1 -->
 <g id="node15" class="node">
-<g id="a_node15"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L36-L37" xlink:title="36 &#160;srccomplexity.1 : srccomplexity.1.md&#10;37 &#160;&#160;&#160;&#160;&#160;lowdown &#45;s &#45;Tman &#45;o srccomplexity.1 srccomplexity.1.md">
+<g id="a_node15"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L37-L38" xlink:title="37 &#160;srccomplexity.1 : srccomplexity.1.md&#10;38 &#160;&#160;&#160;&#160;&#160;lowdown &#45;s &#45;Tman &#45;o srccomplexity.1 srccomplexity.1.md">
 <ellipse fill="none" stroke="black" cx="967.26" cy="-90" rx="72.99" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="967.26" y="-85.8" font-family="Times,serif" font-size="14.00" fill="red">srccomplexity.1</text>
 </a>
@@ -205,7 +205,7 @@
 </g>
 <!-- man -->
 <g id="node17" class="node">
-<g id="a_node17"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L39-L42" xlink:title="39 &#160;# View the man page&#10;40 &#160;.PHONY:man&#10;41 &#160;man : manpage&#10;42 &#160;&#160;&#160;&#160;&#160;man ./srccomplexity.1">
+<g id="a_node17"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L40-L43" xlink:title="40 &#160;# View the man page&#10;41 &#160;.PHONY:man&#10;42 &#160;man : manpage&#10;43 &#160;&#160;&#160;&#160;&#160;man ./srccomplexity.1">
 <ellipse fill="none" stroke="black" cx="967.26" cy="-251.2" rx="27.66" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="967.26" y="-247" font-family="Times,serif" font-size="14.00" fill="green">man</text>
 </a>
@@ -218,7 +218,7 @@
 </g>
 <!-- clean -->
 <g id="node18" class="node">
-<g id="a_node18"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/f14e8483804bf436d1975d9369c3c0cd3a6943b5/Makefile#L44-L46" xlink:title="44 &#160;.PHONY:clean&#10;45 &#160;clean :&#10;46 &#160;&#160;&#160;&#160;&#160;rm &#45;f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o srccomplexity.1">
+<g id="a_node18"><a xlink:href="https://github.com/mlcollard/build-files-f26-010/blob/2fd8411dd79117b41bedbfe6267e819eeea336d8/Makefile#L45-L47" xlink:title="45 &#160;.PHONY:clean&#10;46 &#160;clean :&#10;47 &#160;&#160;&#160;&#160;&#160;rm &#45;f srccomplexity srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest srcMLXPathCountTest.o srccomplexity.1">
 <ellipse fill="none" stroke="black" cx="1044.26" cy="-251.2" rx="31.41" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1044.26" y="-247" font-family="Times,serif" font-size="14.00" fill="green">clean</text>
 </a>
