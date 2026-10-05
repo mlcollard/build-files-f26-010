@@ -1,24 +1,27 @@
 # Build for srcComplexity
 
+CXXFLAGS = -std=c++17
+
 .PHONY:all
 all : srccomplexity srcMLXPathCountTest
 
 # srccomplexity
 srccomplexity : srcComplexity.o srcMLXPathCount.o
-	g++ -std=c++17 $^ -lxml2 -o $@
-
-srcComplexity.o : srcComplexity.cpp srcMLXPathCount.hpp
-	g++ -std=c++17 -c $<
-
-srcMLXPathCount.o : srcMLXPathCount.cpp srcMLXPathCount.hpp
-	g++ -std=c++17 -I/usr/include/libxml2 -c $<
+	g++ $(CXXFLAGS) $^ -lxml2 -o $@
 
 # srcMLXPathCountTest
 srcMLXPathCountTest : srcMLXPathCountTest.o srcMLXPathCount.o
-	g++ -std=c++17 $^ -lxml2 -o $@
+	g++ $(CXXFLAGS) $^ -lxml2 -o $@
 
-srcMLXPathCountTest.o : srcMLXPathCountTest.cpp srcMLXPathCount.hpp
-	g++ -std=c++17 -c $<
+# every object file includes the srcMLXPathCount interface
+srcComplexity.o srcMLXPathCount.o srcMLXPathCountTest.o : srcMLXPathCount.hpp
+
+# libxml2 headers for the XPath code
+srcMLXPathCount.o : CXXFLAGS += -I/usr/include/libxml2
+
+# compile any C++ source file
+%.o : %.cpp
+	g++ $(CXXFLAGS) -c $<
 
 # run srccomplexity on the demo file
 .PHONY:run
