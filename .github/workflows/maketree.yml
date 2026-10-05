@@ -1,9 +1,12 @@
-# Regenerate the Makefile dependency diagram (maketree.svg) whenever a Makefile changes
+# Regenerate the Makefile dependency diagram (maketree.svg) whenever a Makefile changes on main.
+# Diagrams are committed to the separate "diagrams" branch so main only has your own commits.
 
 name: Update Makefile diagram
 
 on:
   push:
+    branches:
+      - main
     paths:
       - '**/Makefile'
   workflow_dispatch:
@@ -14,9 +17,10 @@ permissions:
 env:
   # raw URL of maketree.py in its gist, without a revision so the latest copy is used
   MAKETREE_URL: https://gist.githubusercontent.com/mlcollard/5d2945fa3f1cbf7013aa2cdfbf131727/raw/maketree.py
+  DIAGRAM_BRANCH: diagrams
 
 concurrency:
-  group: maketree-${{ github.ref }}
+  group: maketree
   cancel-in-progress: true
 
 jobs:
@@ -33,20 +37,31 @@ jobs:
 
       - name: Generate diagrams
         run: |
-          # one maketree.svg next to each Makefile in the repo
+          # one maketree.svg per Makefile, at the same relative path
           git ls-files '*Makefile' | while read -r makefile; do
             dir=$(dirname "$makefile")
-            python3 "$RUNNER_TEMP/maketree.py" "$makefile" -o "$dir/maketree.svg"
+            mkdir -p "$RUNNER_TEMP/out/$dir"
+            python3 "$RUNNER_TEMP/maketree.py" "$makefile" -o "$RUNNER_TEMP/out/$dir/maketree.svg"
           done
 
-      - name: Commit updated diagrams
+      - name: Commit to diagrams branch
         run: |
+          # switch to the diagrams branch, creating it empty the first time
+          if git fetch --depth=1 origin "$DIAGRAM_BRANCH"; then
+            git checkout -B "$DIAGRAM_BRANCH" FETCH_HEAD
+          else
+            git checkout --orphan "$DIAGRAM_BRANCH"
+            git rm -rfq .
+          fi
+
+          cp -R "$RUNNER_TEMP/out/." .
           git add -A -- '*maketree.svg'
           if git diff --cached --quiet; then
             echo "Diagrams already up to date"
             exit 0
           fi
+
           git config user.name "github-actions[bot]"
           git config user.email "41898283+github-actions[bot]@users.noreply.github.com"
-          git commit -m "Update Makefile diagram"
-          git push
+          git commit -m "Update diagram for ${GITHUB_SHA::7}"
+          git push origin "$DIAGRAM_BRANCH"
